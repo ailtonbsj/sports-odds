@@ -15,7 +15,7 @@ $dtr = $bill->data_criado;
 $dt = explode(' ',$dtr);
 $d = explode('-',$dt[0]);
 $dt = $d[2].'/'.$d[1].'/'.$d[0].' '.$dt[1]; 
-echo "--------------------------------\r\n";
+echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n\r\n";
 echo "       $SYSTEMNAME\r\n";
 echo " $HUMANDOMAIN\r\n";
 echo " BANCA: $user\r\n";
@@ -42,6 +42,7 @@ echo "TOTAL DE JOGOS: " . count($palps);
 $pagado = number_format($bill->valor,2);
 echo "\r\nVALOR APOSTADO: R$ " . $pagado;
 echo "\r\nPREMIACAO: R$ " . number_format(($premio*$bill->valor),2);
+echo "\r\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
 header('Content-Type: application/octet-stream');
 header("Content-Transfer-Encoding: Binary"); 

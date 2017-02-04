@@ -18,8 +18,8 @@ function atualizaCampPremio(){
 
 //atualizaCampPremio();
 
-require('database_conect.php');
-$datanow = date("Y-m-d H:i:s");
-echo $datanow;
+#require('database_conect.php');
+#$datanow = date("Y-m-d H:i:s");
+#echo $datanow;
 
 ?>
