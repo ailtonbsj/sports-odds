@@ -1,0 +1,49 @@
+
+/*Menu Minhas Apostas*/
+#apostas-menu a, #apostas-menu-xs a {
+	background-color: #286090;
+	color: white;
+}
+
+#apostas-menu a {
+	margin-right: 15px;
+}
+
+/*Menu principal*/
+.navbar {
+	border-width: 0;
+	margin-bottom: 0;
+}
+
+/* Area Minhas Apostas */
+#apostas {
+	background-color: #286090;
+	color: white;
+	margin: 0;
+}
+
+#apostas form {
+	padding: 0 10px 5px 10px;
+}
+
+#apostas table {
+	padding: 0;
+	margin: 0;
+}
+
+/* Menu Campeonatos */
+#campeonatos {
+	margin: 5px 0 5px 0;
+}
+#campeonatos ul {
+	margin: -10px;
+}
+
+#campeonatos ul li {
+	margin: 2px;
+}
+
+#iquadro {
+	width:100%;
+	height: 340px;
+}
