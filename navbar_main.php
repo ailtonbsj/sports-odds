@@ -20,7 +20,10 @@
           break;
         case 'conf':
           require('conf_menu.php');
-          break;   
+          break; 
+        case 'root':
+          require('root_menu.php');
+          break;  
         default:
           require('index_menu.php');
       }

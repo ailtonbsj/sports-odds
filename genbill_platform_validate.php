@@ -7,7 +7,7 @@ if(!isset($_SESSION['user'])) exit();
 $user = $_SESSION['user'];
 if(!(isset($_POST['value']) && isset($_POST['bill']))) exit();
 $val = $_POST['value'];
-$name = $_POST['name'];
+$name = removeAcentos($_POST['name']);
 $billraw = $_POST['bill'];
 $bill = json_decode($billraw);
 
