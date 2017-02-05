@@ -2,7 +2,6 @@
   <li id="menu-home"><a href="index.php">Inicio</a></li>
   <li id="menu-query"><a href="querybill.php">Consultar seu Bilhete</a></li>
   <li><a href="rules.php">Regras</a></li>
-  <li><a href="http://192.168.0.102/palpiteesportivo">Teste</a></li>
 </ul>
 <ul id="nav-apostas" class="nav navbar-nav navbar-right">
   <li id="apostas-menu" class="hidden-xs"><a href="#contact" data-toggle="collapse" data-target="#apostas">Minhas Apostas</a></li>
