@@ -60,9 +60,8 @@ function moreInfo(){
 
 $(function(){
 	$("#nav-item-consulta").addClass('active');
-	$('#bt-filtrar').click(fillTable);
-	fillTable();
-	//2017-01-16 08:52:51
 	$('#dtp1').datetimepicker({format:'YYYY-MM-DD HH:mm:ss'}).val(moment().format('YYYY-MM')+"-01"+" 04:00:00");
 	$('#dtp2').datetimepicker({format:'YYYY-MM-DD HH:mm:ss'});
+	fillTable();
+	$('#bt-filtrar').click(fillTable);
 });
