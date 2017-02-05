@@ -42,7 +42,7 @@ echo "TOTAL DE JOGOS: " . count($palps);
 $pagado = number_format($bill->valor,2);
 echo "\r\nVALOR APOSTADO: R$ " . $pagado;
 echo "\r\nPREMIACAO: R$ " . number_format(($premio*$bill->valor),2);
-echo "\r\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+echo "\r\n\r\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
 header('Content-Type: application/octet-stream');
 header("Content-Transfer-Encoding: Binary"); 

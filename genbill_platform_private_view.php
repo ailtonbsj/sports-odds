@@ -1,6 +1,6 @@
 <!-- modal1 -->
 <div id="savebillmodal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog" style="width: 340px;">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Confirmar Bilhete</h4>

@@ -198,10 +198,10 @@ function fillMyBets(){
     $(rmBtn).addClass('glyphicon glyphicon-remove').attr('data-idodd', r)
     .css('cursor','pointer')
     .click(function(){
-      myBets.splice($(this).attr('data-idodd'),1);
-      fillMyBets();
+       myBets.splice($(this).attr('data-idodd'),1);
+       fillMyBets();
     });
-    rmTd.append(rmBtn);
+    $(rmTd).append(rmBtn);
     $(rw).append(matchTd,betTd,taxTd, rmTd);
     $('#mybets').append(rw);
   }
