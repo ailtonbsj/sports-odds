@@ -1,8 +1,8 @@
 <?php
 include('strings.php');
-session_start();
-if(!isset($_SESSION['user'])) exit();
-$user = $_SESSION['user'];
+//session_start();
+//if(!isset($_SESSION['user'])) exit();
+//$user = $_SESSION['user'];
 if(!isset($_GET['id'])) exit();
 $hash = $_GET['id'];
 require('database_conect.php');
@@ -11,6 +11,7 @@ $stm = $conn->prepare("SELECT * FROM bills WHERE hash = :hash");
 $stm->execute(array('hash' => $hash));
 $bill = $stm->fetchObject();
 $apost = $bill->apostador;
+$user = $bill->user;
 $dtr = $bill->data_criado;
 $dt = explode(' ',$dtr);
 $d = explode('-',$dt[0]);
