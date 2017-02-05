@@ -55,12 +55,12 @@ if(isset($_POST['user'])){
 
 <div id="confirmSaveBill"></div>
 <script type="text/javascript">
-<?php
-  require('genbill_platform_public_crtl.js');
-?>
 $(function(){
   $("#menu-home").addClass('active');
 });
+<?php
+  require('genbill_platform_public_crtl.js');
+?>
 </script>
 
 </body>

@@ -2,7 +2,9 @@
 function removeFoos(content){
   content = content.replace("1.","");
   content = content.replace(" - "," ");
-  if(content.endsWith("Lig")) content = content.replace("Lig","League");
+  if(content.endsWith("Lig")){
+    content = content.replace("Lig","League");
+  }
   return content.toLowerCase();
 }
 
@@ -247,16 +249,15 @@ function saveBill(){
 //Main
 $(function(){
 <?php
-
 if(isset($erro_login)) echo "alert('Login invalido!');\n";
 if(isset($_SESSION['user'])) echo "logged = true;\n";
 else echo "logged = false;\n";
-
 ?>
   //Load Camps
   $.get("http://betbrasil.net/futebolapi/api/Campeonatos?esporte=1", function(camps){
     $("#camp-list").empty();
     for ( i in camps ){
+      var a = removeFoos(camps[i]['CAMP_NOME']);
       var item = new ItemCamp(camps[i]['CAMP_ID'], removeFoos(camps[i]['CAMP_NOME']));
       $("#camp-list").append(item.dom);
     }

@@ -18,6 +18,13 @@ function datetimeSqlToHuman(dt){
 	return tkd[2]+'/'+tkd[1]+'/'+tkd[0]+' '+tk[1];
 }
 
+/* Verify if has string at the end of another string */
+if (typeof String.prototype.endsWith !== 'function') {
+    String.prototype.endsWith = function(suffix) {
+        return this.indexOf(suffix, this.length - suffix.length) !== -1;
+    };
+}
+
 /////////////////////////////////////////
 /* getting Estado using code number */
 function getEstadoByCod(codigo){
