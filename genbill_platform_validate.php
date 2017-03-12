@@ -1,6 +1,7 @@
 <?php
 
 include('useful.php');
+include('strings.php');
 
 session_start();
 if(!isset($_SESSION['user'])) exit();
@@ -25,7 +26,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $produto = 1.0;
 foreach ($bill as $index => $aposta) {
 	$bill[$index][1] = removeAcentos($bill[$index][1]);
-	curl_setopt($ch, CURLOPT_URL, "http://betbrasil.net/futebolapi/api/VJogoOdds/" . $aposta[5]);
+	curl_setopt($ch, CURLOPT_URL, "{$SITEAPI}/futebolapi/api/VJogoOdds/" . $aposta[5]);
 	$jsonstr = curl_exec($ch);
 	$seg = json_decode($jsonstr);
 	if($seg->taxa != $aposta[4]){

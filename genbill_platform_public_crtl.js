@@ -25,7 +25,7 @@ function ItemCamp(id, content){
 
 //Action Camps Button
 function loadMatchs(id){
-  var raw = "http://betbrasil.net/futebolapi/api/CampJogos?$filter=status eq 0 and ativo eq 1 and cancelado ne 1 and camp_ativo eq 1 and esporte_ativo eq 1 and placar_c eq null and placar_f eq null and qtd_odds gt 0 and qtd_main_odds gt 0 and (taxa_c gt 0 or taxa_f gt 0) and esporte_id eq 1 and camp_id eq "+id+"&$orderby=camp_nome,dt_hr_ini,camp_jog_id";
+  var raw = "<?= $SITEAPI ?>/futebolapi/api/CampJogos?$filter=status eq 0 and ativo eq 1 and cancelado ne 1 and camp_ativo eq 1 and esporte_ativo eq 1 and placar_c eq null and placar_f eq null and qtd_odds gt 0 and qtd_main_odds gt 0 and (taxa_c gt 0 or taxa_f gt 0) and esporte_id eq 1 and camp_id eq "+id+"&$orderby=camp_nome,dt_hr_ini,camp_jog_id";
   $('#accordion').html('<img src="img/load.gif" />');
   $.get(raw, function(matchs){
     $('#accordion').empty();
@@ -80,7 +80,7 @@ function AccordItem(id, house, visit, datetime){
   $(this.dom).addClass('panel panel-default')
   .append(accHdr).append(bdyCps);
 
-  var raw='http://betbrasil.net/futebolapi/api/VJogoOdds?$filter=camp_jog_id eq '+id+' and taxa gt 0 and ativo eq 1 and j_ativo eq 1 and del eq 0 and taxa ge vl_min&$orderby=escopo,categoria_id,odd_escopo,odd_type,odd_subtype,dparam';
+  var raw='<?= $SITEAPI ?>/futebolapi/api/VJogoOdds?$filter=camp_jog_id eq '+id+' and taxa gt 0 and ativo eq 1 and j_ativo eq 1 and del eq 0 and taxa ge vl_min&$orderby=escopo,categoria_id,odd_escopo,odd_type,odd_subtype,dparam';
   $.get(raw, function(odds){
     fillTableOdd(id, odds, house+' X '+visit, date[2]+'/'+date[1]+'/'+date[0]+' '+dt[1]);
   });
@@ -254,7 +254,7 @@ if(isset($_SESSION['user'])) echo "logged = true;\n";
 else echo "logged = false;\n";
 ?>
   //Load Camps
-  $.get("http://betbrasil.net/futebolapi/api/Campeonatos?esporte=1", function(camps){
+  $.get("<?= $SITEAPI ?>/futebolapi/api/Campeonatos?esporte=1", function(camps){
     $("#camp-list").empty();
     for ( i in camps ){
       var a = removeFoos(camps[i]['CAMP_NOME']);
