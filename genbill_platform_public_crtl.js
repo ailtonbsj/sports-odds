@@ -81,9 +81,9 @@ function AccordItem(id, house, visit, datetime){
   .append(accHdr).append(bdyCps);
 
   var raw="get_externalapi.php?q=3&id="+id;
-  //$.get(raw, function(odds){
-  //  fillTableOdd(id, odds, house+' X '+visit, date[2]+'/'+date[1]+'/'+date[0]+' '+dt[1]);
-  //});
+  $.get(raw, function(odds){
+    fillTableOdd(id, odds, house+' X '+visit, date[2]+'/'+date[1]+'/'+date[0]+' '+dt[1]);
+  });
   
 }
 //END Class AccordItem
